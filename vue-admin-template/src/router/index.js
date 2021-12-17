@@ -1,10 +1,9 @@
+/* Layout */
+import Layout from '@/layout'
 import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
-
-/* Layout */
-import Layout from '@/layout'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -91,14 +90,14 @@ export const constantRoutes = [
   },
 
   {
-    path: '/home',
+    path: '/layoutDesign',
     component: Layout,
     children: [
       {
-        path: 'home',
-        name: 'Home',
-        component: () => import('@/views/home/index'),
-        meta: { title: 'Home', icon: 'form' }
+        path: 'layoutDesign',
+        name: 'layoutDesign',
+        component: () => import('@/views/layoutDesign/index'),
+        meta: { title: 'layoutDesign', icon: 'form' }
       }
     ]
   },
